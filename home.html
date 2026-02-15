@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <body>
-        <h1>Linkedin Profile Page</h1>
-    </body>
+  <head>
+    <title>Linkedin Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img src="Imgs/UpperLevelProfilePic.jpg" alt="Upper Level Profil Pic">
+    <img src="Imgs/OrtizIII_Angel.jpg" alt="Description of the image" id="profile-circle-image">
+    <button id="toggle-mode" onclick="DarkMode()">Toggle Dark Mode</button>
+    
+    <div id="Name-Title">
+      <h2>Angel Ortiz III</h2>
+      <p>He/Him</p>
+    </div>
+    <h3>Senior Computer Information Systems Major | 2026</h3>
+    <p>Washington, Distrcit of Columbia, United States</p>
+    <div id="Connection-Area">
+        <p id="Connection_Count">0</p>
+        <p>Connections</p>
+    </div>
+    <button id="Connection_Count_btn" onclick="AddConnnection()" >+Connection</button>
+    <script src="script.js"></script>
+  </body>
 </html>

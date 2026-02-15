@@ -1,0 +1,54 @@
+body {
+  background-image: url('my_background.jpg'); /* Specify the image file path/URL */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  background-size: cover;        /* Scales the image to cover the entire element */
+  background-position: center;   /* Centers the image within the element */
+  background-attachment: fixed;  /* Keeps the image fixed in the viewport during scrolling */
+}
+#dark-light-btn{
+  display: flex;
+  justify-content: flex-end;
+  
+}
+#Name-Title{
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+#Connection-Area{
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+/* Profile Photo Circle*/
+#profile-circle-image {
+  width: 150px;      /* Set a fixed width */
+  height: 150px;     /* Set the same height to ensure it's a square */
+  border-radius: 50%; /* Makes the square image circular */
+  object-fit: cover; /* Optional: Ensures the image covers the area while maintaining aspect ratio and centering the subject */
+}
+
+/*Dark and Light Button */
+body.dark-mode {
+  background-color: #121212;
+  color: #f9f9f9;
+}
+
+/* Optional button styling */
+button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #111;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode button {
+  background-color: #fff;
+  color: #111;
+}
