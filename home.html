@@ -2,24 +2,33 @@
 <html>
   <head>
     <title>Linkedin Profile</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <img src="Imgs/UpperLevelProfilePic.jpg" alt="Upper Level Profil Pic">
-    <img src="Imgs/OrtizIII_Angel.jpg" alt="Description of the image" id="profile-circle-image">
-    <button id="toggle-mode" onclick="DarkMode()">Toggle Dark Mode</button>
-    
+    <div id="image-container ">
+        <img id="background-image" src="Imgs/UpperLevelProfilePic.jpg" alt="Upper Level Profil Pic">
+        <img id="overlay-image"  src="Imgs/OrtizIII_Angel.jpg" alt="Description of the image" id="profile-circle-image">
+    </div>
+    <div id="Toggle-Dark">
+      <button id="toggle-mode" onclick="DarkMode()">Toggle Dark Mode</button>
+    </div>
     <div id="Name-Title">
       <h2>Angel Ortiz III</h2>
-      <p>He/Him</p>
+      <div id="pronoun-container">
+        <p>He/Him</p>
+      </div>
+    </div>
+    <div id="Location-CI">
+      <p>Washington, Distrcit of Columbia, United States</p>
+      <a href="https://www.linkedin.com/in/angelortiziii/" target="_blank">Contact Info</a>
     </div>
     <h3>Senior Computer Information Systems Major | 2026</h3>
-    <p>Washington, Distrcit of Columbia, United States</p>
+    
     <div id="Connection-Area">
         <p id="Connection_Count">0</p>
         <p>Connections</p>
     </div>
-    <button id="Connection_Count_btn" onclick="AddConnnection()" >+Connection</button>
-    <script src="script.js"></script>
+    <button id="Connection_Count_btn" onclick="AddConnnection()" >+ Connection</button>
+    <script src="logic.js"></script>
   </body>
 </html>

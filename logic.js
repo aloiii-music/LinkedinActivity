@@ -5,6 +5,7 @@ function AddConnnection(){
     Connection_Count_El.textContent = Connection_Count
 }
 
+// Toggle Button
 const toggleBtn = document.getElementById('toggle-mode');
 
 toggleBtn.addEventListener('click', () => {

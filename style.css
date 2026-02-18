@@ -1,19 +1,52 @@
-body {
-  background-image: url('my_background.jpg'); /* Specify the image file path/URL */
-  background-repeat: no-repeat;  /* Prevents the image from repeating */
-  background-size: cover;        /* Scales the image to cover the entire element */
-  background-position: center;   /* Centers the image within the element */
-  background-attachment: fixed;  /* Keeps the image fixed in the viewport during scrolling */
+#image-container {
+  /* Set the container's position to relative so absolute children are positioned relative to it */
+  position: relative; 
+  /* The container will naturally take the dimensions of the first (static/relative) image, 
+  but you can also define an explicit width and height if needed */
+  width: fit-content; /* or specific width, e.g., 500px */
 }
-#dark-light-btn{
-  display: flex;
-  justify-content: flex-end;
-  
+#background-image {
+    position: relative; 
+    height: 25vh; /* This makes the container half the height of the screen */
+    width: 100%;  /* Ensures the container spans the full width */
+    overflow: hidden; /* Hides any overflowing parts of the image */
+
+}
+
+#background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container while maintaining its aspect ratio, cropping as necessary */
+    display: block; /* Removes any default bottom margin issues */
+}
+/* Profile Photo Circle*/
+#overlay-image {
+  /* Position the overlay image absolutely within its relative container */
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 150px;      /* Set a fixed width */
+  height: 150px;     /* Set the same height to ensure it's a square */
+  border-radius: 50%; /* Makes the square image circular */
+  object-fit: cover; /* Optional: Ensures the image covers the area while maintaining aspect ratio and centering the subject */
+  /* Use top, bottom, left, and right properties to position the image exactly where you want it */
+  /* Example: to center the image, you could use transform: translate(-50%, -50%); top: 50%; left: 50%; */
+  top: 15%;
+  left:5%;
+  /* Use z-index to control the stacking order (higher numbers are on top) */
+  z-index: 1; /* Make sure this is higher than other elements if needed */
 }
 #Name-Title{
   display: flex;
   justify-content: flex-start;
   gap: 5px;
+}
+#pronoun-container{
+  margin-top: 10px;
+}
+#Location-CI{
+  display: flex;
+  
 }
 #Connection-Area{
   display: flex;
@@ -21,15 +54,11 @@ body {
   gap: 5px;
 }
 
-/* Profile Photo Circle*/
-#profile-circle-image {
-  width: 150px;      /* Set a fixed width */
-  height: 150px;     /* Set the same height to ensure it's a square */
-  border-radius: 50%; /* Makes the square image circular */
-  object-fit: cover; /* Optional: Ensures the image covers the area while maintaining aspect ratio and centering the subject */
-}
-
 /*Dark and Light Button */
+#Toggle-Dark{
+  display: flex;
+  justify-content: flex-end;
+}
 body.dark-mode {
   background-color: #121212;
   color: #f9f9f9;
@@ -51,4 +80,8 @@ button {
 body.dark-mode button {
   background-color: #fff;
   color: #111;
+}
+
+.Example{
+  color: aqua;
 }
