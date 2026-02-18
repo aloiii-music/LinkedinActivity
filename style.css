@@ -1,4 +1,4 @@
-#image-container {
+#ProfileImage-container {
   /* Set the container's position to relative so absolute children are positioned relative to it */
   position: relative; 
   /* The container will naturally take the dimensions of the first (static/relative) image, 
@@ -36,7 +36,7 @@
   z-index: 1; /* Make sure this is higher than other elements if needed */
 }
 
-#Name-Title{
+#User-Title-Container{
   display: flex;
   justify-content: flex-start;
   gap: 5px;
@@ -44,7 +44,7 @@
 #pronoun-container{
   margin-top: 10px;
 }
-#Location-CI{
+#Location-Container{
   display: flex;
   gap: 10px;
 }
